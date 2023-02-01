@@ -1,11 +1,9 @@
-@startuml microsservices-flow
+@startuml components-flow
 
-    [EMPRESA]
-    [DEPARTAMENTO]
-    [EMPREGADO]
+    [SERVICE_A]
+    [SERVICE_B]
+    [SERVICE_C]
 
-    [EMPRESA] --> [DEPARTAMENTO]
-    [EMPRESA] --> [EMPREGADO]
-    [DEPARTAMENTO] --> [EMPREGADO]
-
+    [SERVICE_A] -right-> [SERVICE_B]
+    [SERVICE_B] -right-> [SERVICE_C]
 @enduml

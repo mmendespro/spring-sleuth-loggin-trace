@@ -4,7 +4,7 @@ A arquitetura de microsserviços envolve vários serviços que interagem entre s
 
 Imagine o cenário abaixo, onde multiplas chamadas (seja Rest ou gRPC) acontecem entre os microsserviços envolvidos:
 
-![dritributed-components.png](./docs/imgs/components-diagram.png)
+![components-flow.png](./docs/imgs/components-flow.png)
 
 Suponha que durante essas chamadas haja algum problema ou ocorreu uma exceção, seja por haver problemas de latência devido a um determinado serviço demorando mais do que o esperado, como identificamos onde o problema está ocorrendo? Regularmente, teríamos usado o log para analisar e saber mais sobre as exceções ocorridas e também o tempo de desempenho, mas, como os microsserviços envolvem vários fluxos distintos, não podemos usar o log de apenas um, cada serviço terá seus próprios logs separados, portanto, precisaremos passar pelos logs de cada serviço, além disso, como correlacionamos os logs a uma cadeia de chamadas de solicitação? Ou seja, quais logs de microsserviços estão relacionados a Request1, quais estão relacionados a Request2?
 
