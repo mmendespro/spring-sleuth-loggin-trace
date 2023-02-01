@@ -1,8 +1,8 @@
 ## Distributed Log Tracing using Sleuth and Zipkin
 
-A arquitetura de microsserviços envolve vários serviços que interagem entre si. Portanto, uma funcionalidade pode envolver chamadas para vários microsserviços. Normalmente, para sistemas desenvolvidos com arquitetura de microsserviços, existem muitos microsserviços envolvidos, isso ocorre muito em fluxos longos como as SAGAs por exemplo.
+A arquitetura de microsserviços envolve vários serviços que interagem entre si. Portanto, uma funcionalidade pode envolver chamadas para vários microsserviços. Normalmente, isso ocorre muito em fluxos longos como as SAGAs por exemplo.
 
-Imagine o cenário abaixo, onde muitiplas chamadas (seja Rest ou gRPC) acontecem entre os microsserviços envolvidos:
+Imagine o cenário abaixo, onde multiplas chamadas (seja Rest ou gRPC) acontecem entre os microsserviços envolvidos:
 
 ![dritributed-components.png](./docs/imgs/components-diagram.png)
 
