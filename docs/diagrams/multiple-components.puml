@@ -1,0 +1,11 @@
+@startuml microsservices-flow
+
+    [EMPRESA]
+    [DEPARTAMENTO]
+    [EMPREGADO]
+
+    [EMPRESA] --> [DEPARTAMENTO]
+    [EMPRESA] --> [EMPREGADO]
+    [DEPARTAMENTO] --> [EMPREGADO]
+
+@enduml
