@@ -22,4 +22,47 @@ Dividirei este tutorial em 3 partes:
 ![microsservices-flow.png](./docs/imgs/microsservices-flow.png)
 
 2. Implementar rastreamento distribuído usando Spring Cloud Sleuth.
-3. Visualize o rastreamento distribuído usando o Zipkin.
+3. Visualizar o rastreamento distribuído usando o Zipkin.
+
+## 1. Criando os projetos usando Spring Boot
+
+Para configurarmos nossos três microsserviços iremos utilizar Spring Initializr para nos auxiliar nesta etapa.
+
+1. Crie três microsserviços com os nomes: empresa-svc, departamento-svc e empregado-svc
+
+2. Configure as propriedades do projeto conforme abaixo:
+```shell-script
+    <properties>
+        <java.version>11</java.version>
+        <spring-cloud.version>2021.0.5</spring-cloud.version>
+    </properties>
+```
+
+3. Adicione as dependências abaixo:
+```shell-script
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-sleuth</artifactId>
+    </dependency>
+```
+
+4. Devido ao Spring Sleuth fazer parte de outra stack Spring devemos configurar o repositório para termos acesso aos starters do Spring Cloud, para isso adicione o trecho abaixo ao pom.xml (caso tenha usado o Spring Initializr basta incluir a dependência "Distributed Trancing"):
+
+```shell-script
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+```
