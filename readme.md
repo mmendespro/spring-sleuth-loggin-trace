@@ -49,6 +49,11 @@ Para configurarmos nossos três microsserviços iremos utilizar Spring Initializ
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-sleuth</artifactId>
     </dependency>
+
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+    </dependency>
 ```
 
 4. Devido ao Spring Sleuth fazer parte de outra stack Spring devemos configurar o repositório para termos acesso aos starters do Spring Cloud, para isso adicione o trecho abaixo ao pom.xml (caso tenha usado o Spring Initializr basta incluir a dependência "Distributed Trancing"):
@@ -74,3 +79,6 @@ Para configurarmos nossos três microsserviços iremos utilizar Spring Initializ
         <artifactId>spring-cloud-starter-openfeign</artifactId>
     </dependency>
 ```
+
+![zipkin-trace.png](./docs/imgs/zipkin-trace.png)
+![zipkin-trace-detail.png](./docs/imgs/zipkin-trace-detail.png)

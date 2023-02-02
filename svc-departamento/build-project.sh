@@ -11,4 +11,4 @@ docker rmi spring/departamento-service-jvm:latest
 # build container image
 docker build -f Dockerfile.jvm -t spring/departamento-service-jvm .
 # run container
-docker run -id --network=trace-net -e LOGGING_URL=http://openzipkin:9411 --name departamento-service-jvm -p 8081:8081 spring/departamento-service-jvm
+docker run -id --network=trace-net --name departamento-service-jvm -p 8081:8081 spring/departamento-service-jvm
