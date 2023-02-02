@@ -12,9 +12,9 @@ import net.local.poc.service.empresasvc.application.dto.DepartamentoDTO;
 @FeignClient(name = "buscarDepartamento", url = "http://departamento-service-jvm:8081")
 public interface BuscarDepartamentoClient {
     
-    @GetMapping( "/empresa/{codEmpresa}")
+    @GetMapping( "/departamentos/empresa/{codEmpresa}")
     ResponseEntity<List<DepartamentoDTO>> buscar(@PathVariable Integer codEmpresa);
 
-    @GetMapping(path = "/empresa/{codEmpresa}/empregados")
+    @GetMapping(path = "/departamentos/empresa/{codEmpresa}/empregados")
     public ResponseEntity<List<DepartamentoDTO>> buscarComEmpregados(@PathVariable(name = "codEmpresa") Integer codEmpresa);
 }
