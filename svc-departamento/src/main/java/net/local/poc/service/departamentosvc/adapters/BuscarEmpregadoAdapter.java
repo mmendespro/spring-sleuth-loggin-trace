@@ -1,4 +1,4 @@
-package net.local.poc.service.departamentosvc.infrastructure.services;
+package net.local.poc.service.departamentosvc.adapters;
 
 import java.util.List;
 
@@ -9,11 +9,11 @@ import net.local.poc.service.departamentosvc.application.dto.EmpregadoDTO;
 import net.local.poc.service.departamentosvc.application.ports.persistence.BuscarEmpregadosPort;
 
 @Component
-public class BuscarEmpregadoService implements BuscarEmpregadosPort {
+public class BuscarEmpregadoAdapter implements BuscarEmpregadosPort {
 
     private final BuscarEmpregadoClient client;
 
-    public BuscarEmpregadoService(BuscarEmpregadoClient client) {
+    public BuscarEmpregadoAdapter(BuscarEmpregadoClient client) {
         this.client = client;
     }
 
