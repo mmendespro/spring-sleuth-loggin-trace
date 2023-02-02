@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import net.local.poc.service.empresasvc.application.dto.EmpregadoDTO;
 
-@FeignClient(name = "buscarEmpregado", url = "http://localhost:8082")
+@FeignClient(name = "buscarEmpregado", url = "http://empregado-service-jvm:8082")
 public interface BuscarEmpregadoClient {
     
     @GetMapping( "/empregados/departamento/{codDepartamento}")
