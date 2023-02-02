@@ -66,3 +66,11 @@ Para configurarmos nossos três microsserviços iremos utilizar Spring Initializ
         </dependencies>
     </dependencyManagement>
 ```
+5. A partir dos serviços svc-empresa e svc-departamento incluiremos o openfeign para fazermos chamadas rest entre os microsserviços participantes do fluxo porposto no diagrama anterior.
+ 
+```shell-script
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+```
