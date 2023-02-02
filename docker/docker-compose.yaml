@@ -12,7 +12,7 @@ services:
       - trace-net
   
   empresa:
-    image: spring/empresa-service-jvm
+    image: spring/empresa-service-jvm:latest
     container_name: empresa-service-jvm
     hostname: empresa-service-jvm
     environment:
@@ -25,7 +25,7 @@ services:
       - openzipkin
   
   departamento:
-    image: spring/departamento-service-jvm
+    image: spring/departamento-service-jvm:latest
     container_name: departamento-service-jvm
     hostname: departamento-service-jvm
     environment:
@@ -39,7 +39,7 @@ services:
       - openzipkin
 
   empregado:
-    image: spring/empregado-service-jvm
+    image: spring/empregado-service-jvm:latest
     container_name: empregado-service-jvm
     hostname: empregado-service-jvm
     environment:
