@@ -11,4 +11,4 @@ docker rmi spring/empregado-service-jvm:latest
 # build container image
 docker build -f Dockerfile.jvm -t spring/empregado-service-jvm .
 # run container
-docker run -id --network=trace-net --name empregado-service-jvm -p 8082:8082 spring/empregado-service-jvm
+#docker run -id --network=trace-net --name empregado-service-jvm -p 8082:8082 spring/empregado-service-jvm
