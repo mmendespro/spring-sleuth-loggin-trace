@@ -10,47 +10,6 @@ services:
       - 9411:9411
     networks:
       - trace-net
-  
-  empresa:
-    image: spring/empresa-service-jvm:latest
-    container_name: empresa-service-jvm
-    hostname: empresa-service-jvm
-    environment:
-      - LOGGING_URL=http://openzipkin:9411
-    ports:
-      - "8080:8080"
-    networks:
-      - trace-net
-    depends_on:
-      - openzipkin
-  
-  departamento:
-    image: spring/departamento-service-jvm:latest
-    container_name: departamento-service-jvm
-    hostname: departamento-service-jvm
-    environment:
-      - LOGGING_URL=http://openzipkin:9411
-    restart: unless-stopped
-    ports:
-      - "8081:8081"
-    networks:
-      - trace-net
-    depends_on:
-      - openzipkin
-
-  empregado:
-    image: spring/empregado-service-jvm:latest
-    container_name: empregado-service-jvm
-    hostname: empregado-service-jvm
-    environment:
-      - LOGGING_URL=http://openzipkin:9411
-    restart: unless-stopped
-    ports:
-      - "8082:8082"
-    networks:
-      - trace-net
-    depends_on:
-      - openzipkin
 
 networks:
   trace-net:
