@@ -35,12 +35,12 @@ public class EmpregadoService implements CriarEmpregado, ListarTodos, ListarPorD
 
     @Override
     public List<EmpregadoResponse> listarDepartamento(Integer codDepartamento) {
-        return loadEmpregadoPort.loadAll().stream().filter(emp -> emp.getCodDepartamento().equals(codDepartamento)).map(this::maptoResponse).collect(Collectors.toList());
+        return loadEmpregadoPort.loadByCodDepartamento(codDepartamento).stream().map(this::maptoResponse).collect(Collectors.toList());
     }
 
     @Override
     public List<EmpregadoResponse> listarEmpresa(Integer codEmpresa) {
-        return loadEmpregadoPort.loadAll().stream().filter(emp -> emp.getCodEmpresa().equals(codEmpresa)).map(this::maptoResponse).collect(Collectors.toList());
+        return loadEmpregadoPort.loadByCodEmpresa(codEmpresa).stream().map(this::maptoResponse).collect(Collectors.toList());
     }
 
     private EmpregadoResponse maptoResponse(Empregado emp) {
