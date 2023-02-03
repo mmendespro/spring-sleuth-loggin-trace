@@ -1,4 +1,4 @@
-package net.local.poc.service.empresasvc.application.ports.persistence;
+package net.local.poc.service.empresasvc.application.ports.httpclients;
 
 import java.util.List;
 

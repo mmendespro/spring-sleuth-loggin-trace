@@ -8,7 +8,7 @@ import net.local.poc.service.departamentosvc.application.domain.Departamento;
 import net.local.poc.service.departamentosvc.application.dto.DepartamentoRequest;
 import net.local.poc.service.departamentosvc.application.dto.DepartamentoResponse;
 import net.local.poc.service.departamentosvc.application.dto.EmpregadoDTO;
-import net.local.poc.service.departamentosvc.application.ports.persistence.BuscarEmpregadosPort;
+import net.local.poc.service.departamentosvc.application.ports.httpclients.BuscarEmpregadosPort;
 import net.local.poc.service.departamentosvc.application.ports.persistence.LoadDepartamentoPort;
 import net.local.poc.service.departamentosvc.application.ports.persistence.SaveDepartamentoPort;
 import net.local.poc.service.departamentosvc.application.ports.usecases.CriarDepartamento;

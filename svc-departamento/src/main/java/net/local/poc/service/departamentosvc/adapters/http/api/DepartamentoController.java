@@ -1,4 +1,4 @@
-package net.local.poc.service.departamentosvc.adapters.http.rest;
+package net.local.poc.service.departamentosvc.adapters.http.api;
 
 import java.util.List;
 

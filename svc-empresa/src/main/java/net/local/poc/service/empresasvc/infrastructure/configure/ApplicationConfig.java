@@ -3,8 +3,8 @@ package net.local.poc.service.empresasvc.infrastructure.configure;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import net.local.poc.service.empresasvc.application.ports.persistence.LoadDepartamentoPort;
-import net.local.poc.service.empresasvc.application.ports.persistence.LoadEmpregadoPort;
+import net.local.poc.service.empresasvc.application.ports.httpclients.LoadDepartamentoPort;
+import net.local.poc.service.empresasvc.application.ports.httpclients.LoadEmpregadoPort;
 import net.local.poc.service.empresasvc.application.services.EmpresaService;
 import net.local.poc.service.empresasvc.infrastructure.persistence.repository.EmpresaRepository;
 

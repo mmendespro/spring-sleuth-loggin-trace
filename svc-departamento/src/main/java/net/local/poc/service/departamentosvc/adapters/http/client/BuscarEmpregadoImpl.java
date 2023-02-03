@@ -1,19 +1,18 @@
-package net.local.poc.service.departamentosvc.adapters;
+package net.local.poc.service.departamentosvc.adapters.http.client;
 
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import net.local.poc.service.departamentosvc.adapters.http.client.BuscarEmpregadoClient;
 import net.local.poc.service.departamentosvc.application.dto.EmpregadoDTO;
-import net.local.poc.service.departamentosvc.application.ports.persistence.BuscarEmpregadosPort;
+import net.local.poc.service.departamentosvc.application.ports.httpclients.BuscarEmpregadosPort;
 
 @Component
-public class BuscarEmpregadoAdapter implements BuscarEmpregadosPort {
+public class BuscarEmpregadoImpl implements BuscarEmpregadosPort {
 
     private final BuscarEmpregadoClient client;
 
-    public BuscarEmpregadoAdapter(BuscarEmpregadoClient client) {
+    public BuscarEmpregadoImpl(BuscarEmpregadoClient client) {
         this.client = client;
     }
 
