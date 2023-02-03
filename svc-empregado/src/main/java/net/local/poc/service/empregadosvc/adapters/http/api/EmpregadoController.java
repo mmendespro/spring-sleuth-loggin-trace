@@ -1,4 +1,4 @@
-package net.local.poc.service.empregadosvc.adapters.http.rest;
+package net.local.poc.service.empregadosvc.adapters.http.api;
 
 import java.util.List;
 
